@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- Reduce the amount of ranged in the mixed and breach combat group, because neolithic archers are underpowered and boring to fight against -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[position()=1 or position()=4]/options/Tribal_Archer</xpath>
+    <value>
+      <Tribal_Archer>5</Tribal_Archer>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[position()=1 or position()=4]/options/Tribal_Hunter</xpath>
+    <value>
+      <Tribal_Hunter>5</Tribal_Hunter>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[position()=1 or position()=4]/options/Tribal_HeavyArcher</xpath>
+    <value>
+      <Tribal_HeavyArcher>5</Tribal_HeavyArcher>
+    </value>
+  </Operation>    
+  
+  <!-- Mixed group needs more berserkers or they won't have enough smokes -->     
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[position()=1 or position()=4]/options/Tribal_Berserker</xpath>
+    <value>
+      <Tribal_Berserker>10</Tribal_Berserker>
+    </value>
+  </Operation>    
+
+  <!-- Add fire throwers to every battle group -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>
+      /Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Peaceful"
+      or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options
+    </xpath>
+    <value>
+      <UncompromisingTribalFaction_FireThrower>3</UncompromisingTribalFaction_FireThrower>
+    </value>
+  </Operation>
+
+  <!-- Give the archer only group a large amount of fire throwers. An arson surprise group that doesn't have smokes -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[position()=2]/options/UncompromisingTribalFaction_FireThrower</xpath>
+    <value>
+      <UncompromisingTribalFaction_FireThrower>15</UncompromisingTribalFaction_FireThrower>
+    </value>
+  </Operation>    
+</Patch>

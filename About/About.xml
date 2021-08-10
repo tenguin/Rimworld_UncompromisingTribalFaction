@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>[Fuu] Uncompromising Tribal Faction</name>
+  <author>Fuu Chan</author>
+  <packageId>Fuu.UncompromisingTribalFaction</packageId>
+  <description>
+The tribal faction is in a sorry state. In a world with either gun-toting, high tech, robotic, armored, or giant insect factions, it's a wonder the tribal faction has managed to survive at all.
+
+After losing battle after battle, the chiefs got together to formulate a new battle strategy.
+
+Tribal War Plan:
+1. Gives tribal Breachers and Berserkers a 50% chance to spawn with volcanic ash filled "Smoke bombs", to cover their advance amidst gunfire.
+2. Adds the tribal Fire thrower, a grenadier unit equipped with "Fire bombs" from "Vanilla Weapons Expanded - Tribal" to flush out defenders from their positions.
+3. Gives tribal Breachers, Berserkers, and Chiefs "Battle banners" from "Vanilla Apparel Expanded - Accessories", to increase their pain threshold.
+4. Gives all tribal Archers "Quivers" from "Vanilla Apparel Expanded - Accessories", to increase their ranged rate of fire.
+5. Gives tribal Breachers, Archers, and Warriors normal quality gear instead of poor quality.
+6. Tweaked raid unit spawn ratios for more effective battle groups.
+
+New Item: Smoke Bomb 
+  A small clay pot filled with fine volcanic ash. When smashed mid-air, it will release a small cloud of smoke, obscuring incoming shots and preventing turrets from locking on.
+  Cost: 20 Stone bricks
+  Cannot be refilled (2 charges)
+  Smaller radius than smokepop belts
+
+The goal of this mod was to make the tribals a proper and decent enemy faction, having their own strengths and requiring some strategy to take down, but not overpowered. Hope you enjoy!
+
+*Optimized for performance.
+*Safe to add mid-game.
+*Not recommended to remove mid-game.
+*Rocketman compatible.
+*Rimthreaded compatible.
+*CE compatible, but this was balanced around vanilla.
+*Should be no conflicts unless you have a mod that makes unsafe modifications to the vanilla tribal faction.
+
+Credits to: Oskar Potocki for the VE series and smoke bomb art.
+Credits to: hamu koutarou for the artwork used in the thumbnail and tanosii_chan for the upvote animation! Give them a visit!
+  </description>
+  <supportedVersions>
+    <li>1.3</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>VanillaExpanded.VWETB</packageId>
+      <displayName>Vanilla Weapons Expanded - Tribal</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2454918552</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>VanillaExpanded.VAEAccessories</packageId>
+      <displayName>Vanilla Apparel Expanded — Accessories</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2521176396</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>VanillaExpanded.VWETB</li>
+    <li>VanillaExpanded.VAEAccessories</li>
+  </loadAfter>
+</ModMetaData>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- Change RangedHeavy to RangedBasic and RangedDecent, so it's low/mid tier archers that carry the fire bombs and not the high tier archers -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="VWE_Weapon_FireBomb"]/weaponTags/li</xpath>
+    <value>
+      <li>UncompromisingTribalFaction_FireBomb_Tag</li>
+    </value>
+  </Operation>
+
+  <!-- Ideology needs this tag to make this classify as a neolithic noble weapon or it won't spawn on tribes with neo noble weapon -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="VWE_Weapon_FireBomb"]</xpath>
+    <value>
+      <weaponClasses>
+        <li>Neolithic</li>
+      </weaponClasses>
+    </value>
+  </Operation>
+</Patch>

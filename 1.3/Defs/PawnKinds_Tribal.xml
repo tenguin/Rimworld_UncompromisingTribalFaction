@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <PawnKindDef ParentName="TribalBase">
+    <defName>UncompromisingTribalFaction_FireThrower</defName>
+    <label>fire thrower</label>
+    <combatPower>85</combatPower>
+    <gearHealthRange>0.5~1.8</gearHealthRange>
+    <apparelMoney>400~600</apparelMoney>
+    <apparelRequired>
+      <li>Apparel_WarMask</li>
+    </apparelRequired>
+    <weaponMoney>300~300</weaponMoney>
+    <weaponTags>
+      <li>UncompromisingTribalFaction_FireBomb_Tag</li>
+    </weaponTags>
+    <disallowedTraits>
+      <li>Brawler</li>
+    </disallowedTraits>
+    <initialWillRange>2~4</initialWillRange>
+    <initialResistanceRange>10~16</initialResistanceRange>
+  </PawnKindDef>
+</Defs>
