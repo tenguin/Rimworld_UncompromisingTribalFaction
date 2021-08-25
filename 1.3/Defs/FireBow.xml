@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>UncompromisingTribalFaction_FireBow</defName>
+    <label>fire bow</label>
+    <description>A greatbow equipped with flaming arrows, which excels at dislodging defenders by setting them on fire. However, it takes a fair bit longer to ignite each arrow before firing it.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/FireBow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Bow_Large</soundInteract>
+    <costList>
+      <WoodLog>60</WoodLog>
+      <Chemfuel>40</Chemfuel>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>14000</WorkToMake>
+      <Mass>4.0</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>UncompromisingTribalFaction_FireBow_Tag</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>UncompromisingTribalFaction_FireArrow</defaultProjectile>
+        <warmupTime>2.0</warmupTime>
+        <range>29.9</range>
+        <soundCast>Bow_Large</soundCast>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Greatbow</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>UncompromisingTribalFaction_FireArrow</defName>
+    <label>flaming arrow</label>
+    <graphicData>
+      <texPath>Things/Projectile/FlamingArrow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>UncompromisingTribalFaction_FlameArrow</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>49</speed>
+      <explosionRadius>0.01</explosionRadius>
+      <preExplosionSpawnThingDef>Filth_OilSmear</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>1</preExplosionSpawnChance>
+      <explosionChanceToStartFire>1</explosionChanceToStartFire>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <soundExplode>BulletImpact_Ground</soundExplode>
+    </projectile>
+  </ThingDef>
+</Defs>

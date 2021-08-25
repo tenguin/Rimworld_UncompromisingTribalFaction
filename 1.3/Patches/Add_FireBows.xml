@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_HeavyArcher"]/weaponTags/li[text()="NeolithicRangedHeavy"]</xpath>
+    <value>
+      <li>UncompromisingTribalFaction_FireBow_Tag</li>
+    </value>
+  </Operation>
+
+  <!--CE replaces vanilla tag with gun tag, so don't apply our patch if CE exists-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Combat Extended</li>
+    </mods>
+    <nomatch Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_ChiefRanged"]/weaponTags/li[text()="NeolithicRangedChief"]</xpath>
+      <value>
+        <li>UncompromisingTribalFaction_FireBow_Tag</li>
+      </value>
+    </nomatch>
+  </Operation>
+</Patch>

@@ -10,17 +10,24 @@ After losing battle after battle, the chiefs got together to formulate a new bat
 
 New Tribal War Plan:
 1. Gives tribal Breachers and Berserkers a 50% chance to spawn with volcanic ash filled "Smoke bombs", to cover their advance amidst gunfire.
-2. Adds the tribal Fire thrower, a grenadier unit equipped with "Fire bombs" from "Vanilla Weapons Expanded - Tribal" to flush out defenders from their positions.
-3. Gives tribal Breachers, Berserkers, and Chiefs "Battle banners" from "Vanilla Apparel Expanded - Accessories", to increase their pain threshold.
-4. Gives all tribal Archers "Quivers" from "Vanilla Apparel Expanded - Accessories", to increase their ranged rate of fire.
-5. Gives tribal Breachers, Archers, and Warriors normal quality gear instead of poor quality.
-6. Tweaked raid unit spawn ratios for more effective battle groups.
+2. Gives tribal Heavy Archers and Archer Chiefs "Fire bows", to ignite colonists and colonies from great range.
+3. Adds the tribal Fire thrower, a grenadier unit equipped with "Fire bombs" from "Vanilla Weapons Expanded - Tribal", to flush out defenders from their positions.
+4. Gives tribal Breachers, Berserkers, and Chiefs "Battle banners" from "Vanilla Apparel Expanded - Accessories", to increase their pain threshold.
+5. Gives all tribal Archers "Quivers" from "Vanilla Apparel Expanded - Accessories", to increase their ranged rate of fire.
+6. Gives tribal Breachers, Archers, and Warriors normal quality gear instead of poor quality.
+7. Tweaked raid unit spawn ratios for more effective battle groups.
 
 New Item: Smoke Bomb 
   A small clay pot filled with fine volcanic ash. When smashed mid-air, it will release a small cloud of smoke, obscuring incoming shots and preventing turrets from locking on.
   Cost: 20 Stone bricks
   Cannot be refilled (2 charges)
   Smaller radius than smokepop belts
+
+New Item: Fire Bow
+  A greatbow equipped with flaming arrows, which excels at dislodging defenders by setting them on fire. However, it takes a fair bit longer to ignite each arrow before firing it.
+  Cost: 60 Wood, 40 Chemfuel
+  Lower rate of fire and damage
+  Sets enemies and terrain on fire
 
 The goal of this mod was to make the tribals a proper and decent enemy faction, having their own strengths and requiring some strategy to take down, but not overpowered. Hope you enjoy!
 
@@ -29,8 +36,12 @@ The goal of this mod was to make the tribals a proper and decent enemy faction, 
 *Not recommended to remove mid-game.
 *Rocketman compatible.
 *Rimthreaded compatible.
-*CE compatible, but this was balanced around vanilla.
-*Should be no conflicts unless you have a mod that makes unsafe modifications to the vanilla tribal faction.
+*Mostly CE compatible, newly added fire bows still need a patch.
+*No known conflicts.
+
+~1.1 update:
+Added Fire Bows!
+Reduced the spawn rate of Fire bombers to take into account the new Fire archers.
 
 Github Link: https://github.com/tenguin/Rimworld_UncompromisingTribalFaction
 

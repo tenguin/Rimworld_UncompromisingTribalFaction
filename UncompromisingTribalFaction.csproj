@@ -37,22 +37,30 @@
   <ItemGroup>
     <Content Include="1.3\Assemblies\UncompromisingTribalFaction.dll" />
     <Content Include="1.3\Assemblies\UncompromisingTribalFaction.pdb" />
+    <Content Include="1.3\Defs\DamageDef_FlameArrow.xml" />
+    <Content Include="1.3\Defs\FireBow.xml" />
     <Content Include="1.3\Defs\PawnKinds_Tribal.xml" />
     <Content Include="1.3\Defs\SmokeBomb.xml" />
     <Content Include="1.3\Patches\Add_SmokeBombs.xml" />
     <Content Include="1.3\Patches\Combat_Power.xml" />
     <Content Include="1.3\Patches\Double_Money.xml" />
+    <Content Include="1.3\Patches\Add_FireBows.xml" />
     <Content Include="1.3\Patches\VAE_Accessories.xml" />
     <Content Include="1.3\Patches\VWE_Tribal.xml" />
     <Content Include="1.3\Patches\Factions_Misc.xml" />
     <Content Include="About\About.xml" />
-    <Content Include="Textures\SmokeBomb.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>R:\Games\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Textures\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

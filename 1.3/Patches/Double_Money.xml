@@ -97,7 +97,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/PawnKindDef[defName="Tribal_HeavyArcher"]/weaponMoney</xpath>
     <value>
-      <weaponMoney>500~500</weaponMoney>
+      <weaponMoney>800~800</weaponMoney>
     </value>
   </Operation>
 
