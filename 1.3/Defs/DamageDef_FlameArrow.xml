@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Defs>  
+  <DamageDef Name="UncompromisingTribalFaction_FlameArrow">
+    <defName>UncompromisingTribalFaction_FlameArrow</defName>
+    <workerClass>DamageWorker_Flame</workerClass>
+    <label>flaming arrow</label>
+    <makesBlood>false</makesBlood>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has burned to death from a flaming arrow.</deathMessage>
+    <hediff>Burn</hediff>
+    <armorCategory>Heat</armorCategory>
+    <minDamageToFragment>15</minDamageToFragment>
+    <defaultDamage>0</defaultDamage>
+    <defaultArmorPenetration>0</defaultArmorPenetration>
+    <explosionHeatEnergyPerCell>0</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastFlame</explosionCellFleck>
+    <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+    <explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+    <impactSoundType>Bullet</impactSoundType>
+    <combatLogRules>Damage_Flame</combatLogRules>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+</Defs>

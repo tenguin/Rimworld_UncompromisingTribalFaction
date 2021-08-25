@@ -10,7 +10,8 @@ namespace UncompromisingTribalFaction
 		{
 			base.Notify_BulletImpactNearby(impactData);
 			Pawn wearer = base.Wearer;
-			if (wearer != null && !wearer.Dead && !impactData.bullet.def.projectile.damageDef.isExplosive && impactData.bullet.Launcher != null && impactData.bullet.Launcher.HostileTo(base.Wearer) && !wearer.IsColonist && wearer.Spawned)
+			if (wearer != null && !wearer.Dead && !impactData.bullet.def.projectile.damageDef.isExplosive && impactData.bullet.Launcher != null &&
+				impactData.bullet.Launcher.HostileTo(base.Wearer) && !wearer.IsColonist && wearer.Spawned)
 			{
 				Gas gas = wearer.Position.GetGas(wearer.Map);
 				if (gas == null || !gas.def.gas.blockTurretTracking)

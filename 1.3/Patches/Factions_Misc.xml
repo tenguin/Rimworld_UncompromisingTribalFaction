@@ -35,7 +35,7 @@
       or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options
     </xpath>
     <value>
-      <UncompromisingTribalFaction_FireThrower>3</UncompromisingTribalFaction_FireThrower>
+      <UncompromisingTribalFaction_FireThrower>2</UncompromisingTribalFaction_FireThrower>
     </value>
   </Operation>
 
@@ -43,7 +43,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[position()=2]/options/UncompromisingTribalFaction_FireThrower</xpath>
     <value>
-      <UncompromisingTribalFaction_FireThrower>15</UncompromisingTribalFaction_FireThrower>
+      <UncompromisingTribalFaction_FireThrower>5</UncompromisingTribalFaction_FireThrower>
     </value>
-  </Operation>    
+  </Operation>      
 </Patch>

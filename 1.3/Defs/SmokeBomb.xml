@@ -43,7 +43,7 @@
     </stuffCategories>
     <costStuffCount>20</costStuffCount>
     <graphicData>
-      <texPath>SmokeBomb</texPath>
+      <texPath>Things/Pawn/Humanlike/Apparel/SmokeBomb/SmokeBomb</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <tickerType>Normal</tickerType>
