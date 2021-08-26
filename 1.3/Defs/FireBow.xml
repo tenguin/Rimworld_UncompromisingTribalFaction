@@ -80,7 +80,7 @@
       <stoppingPower>1</stoppingPower>
       <speed>49</speed>
       <explosionRadius>0.01</explosionRadius>
-      <preExplosionSpawnThingDef>Filth_OilSmear</preExplosionSpawnThingDef>
+      <preExplosionSpawnThingDef>UncompromisingTribalFaction_Filth_FireBowTar</preExplosionSpawnThingDef>
       <preExplosionSpawnChance>1</preExplosionSpawnChance>
       <explosionChanceToStartFire>1</explosionChanceToStartFire>
       <ai_IsIncendiary>true</ai_IsIncendiary>

@@ -38,6 +38,7 @@
     <Content Include="1.3\Assemblies\UncompromisingTribalFaction.dll" />
     <Content Include="1.3\Assemblies\UncompromisingTribalFaction.pdb" />
     <Content Include="1.3\Defs\DamageDef_FlameArrow.xml" />
+    <Content Include="1.3\Defs\Filth_FireBowTar.xml" />
     <Content Include="1.3\Defs\FireBow.xml" />
     <Content Include="1.3\Defs\PawnKinds_Tribal.xml" />
     <Content Include="1.3\Defs\SmokeBomb.xml" />
