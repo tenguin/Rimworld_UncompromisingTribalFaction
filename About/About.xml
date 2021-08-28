@@ -39,6 +39,10 @@ The goal of this mod was to make the tribals a proper and decent enemy faction, 
 *Mostly CE compatible, newly added fire bows still need a patch.
 *No known conflicts.
 
+~1.1b update:
+Prevented Fire Bows from spawning in trader, visitor, and traveller groups.
+Tweaked fire archer/fire bomber spawn rates.
+
 ~1.1 update:
 Added Fire Bows!
 Reduced the spawn rate of Fire bombers to take into account the new Fire archers.
