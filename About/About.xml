@@ -39,13 +39,9 @@ The goal of this mod was to make the tribals a proper and decent enemy faction, 
 
 ~1.1c update: Shifted part of the Fire bows reload time into its warmup time.
 
-~1.1b update:
-Prevented Fire bows from spawning in trader, visitor, and traveler groups.
-Tweaked Fire archer/Fire bomber spawn rates.
+~1.1b update: Prevented Fire bows from spawning in trader, visitor, and traveler groups. Tweaked Fire archer/Fire bomber spawn rates.
 
-~1.1 update:
-Added Fire Bows!
-Reduced the spawn rate of Fire bombers to take into account the new Fire archers.
+~1.1 update: Added Fire Bows! Reduced the spawn rate of Fire bombers to take into account the new Fire archers.
 
 Github Link: https://github.com/tenguin/Rimworld_UncompromisingTribalFaction
 
