@@ -22,7 +22,7 @@
       <AccuracyShort>0.85</AccuracyShort>
       <AccuracyMedium>0.75</AccuracyMedium>
       <AccuracyLong>0.50</AccuracyLong>
-      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
       <li>UncompromisingTribalFaction_FireBow_Tag</li>
@@ -35,7 +35,7 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>UncompromisingTribalFaction_FireArrow</defaultProjectile>
-        <warmupTime>2.0</warmupTime>
+        <warmupTime>3.0</warmupTime>
         <range>29.9</range>
         <soundCast>Bow_Large</soundCast>
         <forcedMissRadius>0.1</forcedMissRadius>
