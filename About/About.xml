@@ -37,15 +37,13 @@ The goal of this mod was to make the tribals a proper and decent enemy faction, 
 *CE compatible.
 *No known conflicts.
 
-~1.1c update: 
-Shifted part of the Fire bows reload time into its warmup time.
+~1.1d update: Decreased Fire bow accuracy by 10% so it's less annoying to deal with. Added compatibility for Combat Shields.
 
-~1.1b update: 
-Prevented Fire bows from spawning in trader, visitor, and traveler groups. 
-Tweaked Fire archer/Fire bomber spawn rates.
+~1.1c update: Shifted part of the Fire bows reload time into its warmup time.
 
-~1.1 update: 
-Added Fire Bows! Reduced the spawn rate of Fire bombers to take into account the new Fire archers.
+~1.1b update: Prevented Fire bows from spawning in trader, visitor, and traveler groups. Tweaked Fire archer/Fire bomber spawn rates.
+
+~1.1 update: Added Fire Bows! Reduced the spawn rate of Fire bombers to take into account the new Fire archers.
 
 Github Link: https://github.com/tenguin/Rimworld_UncompromisingTribalFaction
 
@@ -73,5 +71,6 @@ Credits to: hamu koutarou for the artwork used in the thumbnail and tanosii_chan
     <li>Ludeon.RimWorld.Ideology</li>
     <li>VanillaExpanded.VWETB</li>
     <li>VanillaExpanded.VAEAccessories</li>
+    <li>n7huntsman.combatshields</li>
   </loadAfter>
 </ModMetaData>

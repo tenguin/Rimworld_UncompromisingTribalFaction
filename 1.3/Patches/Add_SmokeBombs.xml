@@ -10,11 +10,32 @@
   </Operation>
   
   <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher" or defName="Tribal_Berserker"]</xpath>
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher"]</xpath>
     <value>
       <apparelTags>
-        <li>UncompromisingTribalFaction_Apparel_SmokeBomb_Tag</li>        
+        <li>UncompromisingTribalFaction_Apparel_SmokeBomb_Tag</li>
       </apparelTags>
     </value>
+  </Operation>
+
+  <!--Combat Shields already adds apparelTag to tribals which needs special compatibility case-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Combat Shields</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_Berserker"]/apparelTags</xpath>
+      <value>
+        <li>UncompromisingTribalFaction_Apparel_SmokeBomb_Tag</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_Berserker"]</xpath>
+      <value>
+        <apparelTags>
+          <li>UncompromisingTribalFaction_Apparel_SmokeBomb_Tag</li>
+        </apparelTags>
+      </value>
+    </nomatch>
   </Operation>
 </Patch>

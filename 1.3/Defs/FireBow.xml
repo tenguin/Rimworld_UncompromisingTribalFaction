@@ -4,7 +4,7 @@
   <ThingDef ParentName="BaseWeaponNeolithic">
     <defName>UncompromisingTribalFaction_FireBow</defName>
     <label>fire bow</label>
-    <description>A greatbow equipped with flaming arrows, which excels at dislodging defenders by setting them on fire. However, it takes a fair bit longer to ignite each arrow before firing it.</description>
+    <description>A greatbow equipped with flaming arrows, which excels at dislodging defenders by setting them on fire. However, it has poorer accuracy and takes a fair bit longer to ignite each arrow before firing it.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/FireBow</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -14,14 +14,14 @@
       <WoodLog>60</WoodLog>
       <Chemfuel>40</Chemfuel>
     </costList>
-    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
     <statBases>
       <WorkToMake>14000</WorkToMake>
       <Mass>4.0</Mass>
       <AccuracyTouch>0.65</AccuracyTouch>
-      <AccuracyShort>0.85</AccuracyShort>
-      <AccuracyMedium>0.75</AccuracyMedium>
-      <AccuracyLong>0.50</AccuracyLong>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
       <RangedWeapon_Cooldown>2.25</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
