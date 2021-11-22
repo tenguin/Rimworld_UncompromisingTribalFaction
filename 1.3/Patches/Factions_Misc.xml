@@ -12,32 +12,63 @@
     <value>
       <Tribal_Hunter>5</Tribal_Hunter>
     </value>
-  </Operation> 
-  
-  <!-- Mixed group needs more berserkers or they won't have enough smokes -->     
+  </Operation>
+
+  <!-- Mixed group needs more berserkers or they won't have enough smokes -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[position()=1 or position()=4]/options/Tribal_Berserker</xpath>
     <value>
       <Tribal_Berserker>10</Tribal_Berserker>
     </value>
-  </Operation>    
-
-  <!-- Add fire throwers to every battle group -->
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options</xpath>
-    <value>
-      <UncompromisingTribalFaction_FireThrower>2</UncompromisingTribalFaction_FireThrower>
-    </value>
   </Operation>
 
-  <!-- Make the archer only group have 50% more fire bombers, since they don't have smokes they're pretty weak otherwise -->  
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[position()=2]/options/UncompromisingTribalFaction_FireThrower</xpath>
-    <value>
-      <UncompromisingTribalFaction_FireThrower>3</UncompromisingTribalFaction_FireThrower>
-    </value>
-  </Operation>     
-  
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Combat Extended</li>
+    </mods>
+    <!--Vanilla-->
+    <nomatch Class="PatchOperationSequence">
+      <operations>
+        <!-- Add fire throwers to every battle group -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options</xpath>
+          <value>
+            <UncompromisingTribalFaction_FireThrower>2</UncompromisingTribalFaction_FireThrower>
+          </value>
+        </li>
+        <!-- Make the archer only group have 50% more fire bombers, since they don't have smokes they're pretty weak otherwise -->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[position()=2]/options/UncompromisingTribalFaction_FireThrower</xpath>
+          <value>
+            <UncompromisingTribalFaction_FireThrower>3</UncompromisingTribalFaction_FireThrower>
+          </value>
+        </li>
+      </operations>
+    </nomatch>
+    <!--CE-->
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!--CE changes Fire Throwers to use Great Bows + Flame Arrows instead of Fire Bombs, so drastically increase their numbers-->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options</xpath>
+          <value>
+            <UncompromisingTribalFaction_FireThrower>10</UncompromisingTribalFaction_FireThrower>
+          </value>
+        </li>
+        <!--Reduce normal heavy archers since Fire throwers should basically take their place-->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options/Tribal_HeavyArcher</xpath>
+          <value>
+            <Tribal_HeavyArcher>2</Tribal_HeavyArcher>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+
+
+
   <!-- Don't give trader or peaceful (visitor, traveller) groups any fire bows, otherwise them helping in combat will set everything on fire -->
   <Operation Class="PatchOperationRemove">
     <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[kindDef="Trader" or kindDef="Peaceful"]/guards/Tribal_HeavyArcher</xpath>
