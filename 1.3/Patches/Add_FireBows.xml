@@ -1,22 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/PawnKindDef[defName="Tribal_HeavyArcher"]/weaponTags/li[text()="NeolithicRangedHeavy"]</xpath>
-    <value>
-      <li>UncompromisingTribalFaction_FireBow_Tag</li>
-    </value>
-  </Operation>
-
-  <!--CE replaces vanilla tag with gun tag, so don't apply our patch if CE exists-->
+  <!--Vanilla: Make Archer Chiefs and Heavy Archers only use Fire Bows-->
+  <!--CE: CE removes the fire bow entirely, and changes Fire Throwers to use Great bows equipped with their Fire Arrow Ammo. 
+  This means the Archer Chief and Heavy Archer need to be modified to no longer use the removed Fire bows or they will spawn with no weapons-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Combat Extended</li>
     </mods>
-    <nomatch Class="PatchOperationReplace">
-      <xpath>/Defs/PawnKindDef[defName="Tribal_ChiefRanged"]/weaponTags/li[text()="NeolithicRangedChief"]</xpath>
-      <value>
-        <li>UncompromisingTribalFaction_FireBow_Tag</li>
-      </value>
+    <nomatch Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/PawnKindDef[defName="Tribal_ChiefRanged"]/weaponTags/li[text()="NeolithicRangedChief"]</xpath>
+          <value>
+            <li>UncompromisingTribalFaction_FireBow_Tag</li>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/PawnKindDef[defName="Tribal_HeavyArcher"]/weaponTags/li[text()="NeolithicRangedHeavy"]</xpath>
+          <value>
+            <li>UncompromisingTribalFaction_FireBow_Tag</li>
+          </value>
+        </li>
+      </operations>
     </nomatch>
   </Operation>
 </Patch>
