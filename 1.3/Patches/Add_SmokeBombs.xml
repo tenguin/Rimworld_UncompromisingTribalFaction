@@ -1,28 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/PawnKindDef[@ParentName="TribalChiefBase"]</xpath>
-    <value>
-      <apparelRequired>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[@ParentName="TribalChiefBase"]/apparelRequired</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[@ParentName="TribalChiefBase"]/apparelRequired</xpath>
+      <value>
         <li>UncompromisingTribalFaction_Apparel_SmokeBomb</li>
-      </apparelRequired>
-    </value>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[@ParentName="TribalChiefBase"]</xpath>
+      <value>
+        <apparelRequired>
+          <li>UncompromisingTribalFaction_Apparel_SmokeBomb</li>
+        </apparelRequired>
+      </value>
+    </nomatch>
   </Operation>
   
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher"]</xpath>
-    <value>
-      <apparelTags>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher"]/apparelTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher"]/apparelTags</xpath>
+      <value>
         <li>UncompromisingTribalFaction_Apparel_SmokeBomb_Tag</li>
-      </apparelTags>
-    </value>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher"]</xpath>
+      <value>
+        <apparelTags>
+          <li>UncompromisingTribalFaction_Apparel_SmokeBomb_Tag</li>
+        </apparelTags>
+      </value>
+    </nomatch>
   </Operation>
 
-  <!--Combat Shields already adds apparelTag to tribals which needs special compatibility case-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Combat Shields</li>
-    </mods>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Berserker"]/apparelTags</xpath>
     <match Class="PatchOperationAdd">
       <xpath>/Defs/PawnKindDef[defName="Tribal_Berserker"]/apparelTags</xpath>
       <value>
