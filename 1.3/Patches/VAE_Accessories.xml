@@ -1,16 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- Add battle banners and quivers from VAEA-->
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/PawnKindDef[defName="Tribal_Archer"]</xpath>
-    <value>
-      <apparelRequired>
+  <!-- Add battle banners and quivers from VAEA-->  
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Archer"]/apparelRequired</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_Archer"]/apparelRequired</xpath>
+      <value>
         <li>VAEA_Apparel_Quiver</li>
-      </apparelRequired>
-    </value>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_Archer"]</xpath>
+      <value>
+        <apparelRequired>
+          <li>VAEA_Apparel_Quiver</li>
+        </apparelRequired>
+      </value>
+    </nomatch>
   </Operation>
 
-  <!-- Already have the apparelRequired node from adding SmokeBombs -->
+  <!-- Already have the apparelRequired node orginally or from adding SmokeBombs -->
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/PawnKindDef[defName="Tribal_Hunter" or defName="Tribal_HeavyArcher" or defName="Tribal_ChiefRanged"]/apparelRequired</xpath>
     <value>

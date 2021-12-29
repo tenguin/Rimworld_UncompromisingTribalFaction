@@ -36,6 +36,7 @@ The goal of this mod was to make the tribals a proper and decent enemy faction, 
 *Not recommended to remove mid-game.
 *CE compatible.
 *No known conflicts.
+~1.1f update: Added conditionals to some xml patches to ensure better compatibility with other mods that modify the vanilla tribal faction.
 
 ~1.1e update: Fixed some errors in the CE compatibility patch.
 

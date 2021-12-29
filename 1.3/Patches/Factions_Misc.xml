@@ -45,7 +45,7 @@
         </li>
       </operations>
     </nomatch>
-    <!--CE-->
+    <!--Combat Extended-->
     <match Class="PatchOperationSequence">
       <operations>
         <!--CE changes Fire Throwers to use Great Bows + Flame Arrows instead of Fire Bombs, so drastically increase their numbers-->
@@ -65,9 +65,6 @@
       </operations>
     </match>
   </Operation>
-
-
-
 
   <!-- Don't give trader or peaceful (visitor, traveller) groups any fire bows, otherwise them helping in combat will set everything on fire -->
   <Operation Class="PatchOperationRemove">

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <!-- ***** 2x the ApparelMoney and WeaponMoney, Adjust item quality for some units *****************************************-->
-  <Operation Class="PatchOperationRemove">
+  <!-- Additional money is needed to afford the new smokebombs and VAE Accessories:
+  2x the ApparelMoney and WeaponMoney, Adjust item quality for some units -->
+  <Operation Class="PatchOperationReplace">
     <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher"]/itemQuality</xpath>
+    <value>
+      <itemQuality>Normal</itemQuality>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher"]/apparelMoney</xpath>
@@ -30,8 +34,11 @@
     </value>
   </Operation>
   
-  <Operation Class="PatchOperationRemove">
+  <Operation Class="PatchOperationReplace">
     <xpath>/Defs/PawnKindDef[defName="Tribal_Archer"]/itemQuality</xpath>
+    <value>
+      <itemQuality>Normal</itemQuality>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/PawnKindDef[defName="Tribal_Archer"]/apparelMoney</xpath>
@@ -46,8 +53,11 @@
     </value>
   </Operation>
   
-  <Operation Class="PatchOperationRemove">
+  <Operation Class="PatchOperationReplace">
     <xpath>/Defs/PawnKindDef[defName="Tribal_Warrior"]/itemQuality</xpath>
+    <value>
+      <itemQuality>Normal</itemQuality>
+    </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/PawnKindDef[defName="Tribal_Warrior"]/apparelMoney</xpath>
