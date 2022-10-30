@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- Additional money is needed to afford the new smokebombs and VAE Accessories:
+  2x the ApparelMoney and WeaponMoney, Adjust item quality for some units -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher"]/itemQuality</xpath>
+    <value>
+      <itemQuality>Normal</itemQuality>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher"]/apparelMoney</xpath>
+    <value>
+      <apparelMoney>400~600</apparelMoney>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher"]/weaponMoney</xpath>
+    <value>
+      <weaponMoney>300~300</weaponMoney>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Penitent"]/apparelMoney</xpath>
+    <value>
+      <apparelMoney>100~200</apparelMoney>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Penitent"]/weaponMoney</xpath>
+    <value>
+      <weaponMoney>180~300</weaponMoney>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Archer"]/itemQuality</xpath>
+    <value>
+      <itemQuality>Normal</itemQuality>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Archer"]/apparelMoney</xpath>
+    <value>
+      <apparelMoney>360~700</apparelMoney>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Archer"]/weaponMoney</xpath>
+    <value>
+      <weaponMoney>200~200</weaponMoney>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Warrior"]/itemQuality</xpath>
+    <value>
+      <itemQuality>Normal</itemQuality>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Warrior"]/apparelMoney</xpath>
+    <value>
+      <apparelMoney>400~600</apparelMoney>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Warrior"]/weaponMoney</xpath>
+    <value>
+      <weaponMoney>300~300</weaponMoney>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Hunter"]/apparelMoney</xpath>
+    <value>
+      <apparelMoney>400~600</apparelMoney>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Hunter"]/weaponMoney</xpath>
+    <value>
+      <weaponMoney>250~250</weaponMoney>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Berserker"]/apparelMoney</xpath>
+    <value>
+      <apparelMoney>400~1100</apparelMoney>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Berserker"]/weaponMoney</xpath>
+    <value>
+      <weaponMoney>600~600</weaponMoney>
+    </value>
+  </Operation>
+    
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_HeavyArcher"]/apparelMoney</xpath>
+    <value>
+      <apparelMoney>400~1100</apparelMoney>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_HeavyArcher"]/weaponMoney</xpath>
+    <value>
+      <weaponMoney>800~800</weaponMoney>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[@Name="TribalChiefBase"]/itemQuality</xpath>
+    <value>
+      <itemQuality>Good</itemQuality>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[@Name="TribalChiefBase"]/apparelMoney</xpath>
+    <value>
+      <apparelMoney>900~1500</apparelMoney>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[@Name="TribalChiefBase"]/weaponMoney</xpath>
+    <value>
+      <weaponMoney>1000~2000</weaponMoney>
+    </value>
+  </Operation>
+</Patch>

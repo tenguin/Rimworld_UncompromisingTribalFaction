@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!--  Units with smoke bombs and battle banners are far stronger than vanilla. Increase their combat points so they cost more raid points -->    
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher"]/combatPower</xpath>
+    <value>
+      <combatPower>75</combatPower>
+    </value>
+  </Operation>  
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Berserker"]/combatPower</xpath>
+    <value>
+      <combatPower>85</combatPower>
+    </value>
+  </Operation>
+</Patch>

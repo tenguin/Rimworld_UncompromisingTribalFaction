@@ -9,12 +9,21 @@
   </Operation>
 
   <!-- Ideology needs this tag to make this classify as a neolithic noble weapon or it won't spawn on tribes with neo noble weapon -->
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/ThingDef[defName="VWE_Weapon_FireBomb"]</xpath>
-    <value>
-      <weaponClasses>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="VWE_Weapon_FireBomb"]/weaponClasses</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="VWE_Weapon_FireBomb"]/weaponClasses</xpath>
+      <value>
         <li>Neolithic</li>
-      </weaponClasses>
-    </value>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="VWE_Weapon_FireBomb"]</xpath>
+      <value>
+        <weaponClasses>
+          <li>Neolithic</li>
+        </weaponClasses>
+      </value>
+    </nomatch>
   </Operation>
 </Patch>
