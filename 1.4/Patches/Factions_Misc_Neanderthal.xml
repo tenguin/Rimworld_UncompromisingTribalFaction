@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!--Neanderthals use very few archers, so remove vanilla archers and use the few ranged slots they have for fire-->
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options/Tribal_Archer</xpath>
+          <match Class="PatchOperationRemove">
+            <xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options/Tribal_Archer</xpath>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options/Tribal_Hunter</xpath>
+          <match Class="PatchOperationRemove">
+            <xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options/Tribal_Hunter</xpath>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options/Tribal_HeavyArcher</xpath>
+          <match Class="PatchOperationRemove">
+            <xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options/Tribal_HeavyArcher</xpath>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options/Tribal_ChiefRanged</xpath>
+          <match Class="PatchOperationRemove">
+            <xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement"]/options/Tribal_ChiefRanged</xpath>
+          </match>
+        </li>
+
+        <!-- Add fire archers -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options</xpath>
+          <value>
+            <UncompromisingTribalFaction_Hunter_Fire>2</UncompromisingTribalFaction_Hunter_Fire>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options</xpath>
+          <value>
+            <UncompromisingTribalFaction_HeavyArcher_Fire>1</UncompromisingTribalFaction_HeavyArcher_Fire>
+          </value>
+        </li>
+        
+        <!-- Add fire throwers to every battle group -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/FactionDef[defName="TribeRoughNeanderthal"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options</xpath>
+          <value>
+            <UncompromisingTribalFaction_FireThrower>3</UncompromisingTribalFaction_FireThrower>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!--Flamebows are a Biotech only item. Use Great flamebows if Biotech is not installed, modify Flamebows to use our class if installed-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Proj_FireArrow"]/thingClass</xpath>
+      <value>
+        <thingClass>UncompromisingTribalFaction.FuuFireArrow</thingClass>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationReplace">
+      <xpath>/Defs/PawnKindDef[defName="UncompromisingTribalFaction_Hunter_Fire"]/weaponTags/li</xpath>
+      <value>
+        <li>UncompromisingTribalFaction_GreatFlamebow_Tag</li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!--Archer Chiefs should only use Great Firebow or mod-added items, not the standard greatbow.-->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="Bow_Great"]/weaponTags/li[text()="NeolithicRangedChief"]</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName="Bow_Great"]/weaponTags/li[text()="NeolithicRangedChief"]</xpath>
+    </match>
+  </Operation>
+</Patch>

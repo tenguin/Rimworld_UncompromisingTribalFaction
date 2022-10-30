@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[@ParentName="TribalChiefBase"]/apparelRequired</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[@ParentName="TribalChiefBase"]/apparelRequired</xpath>
+      <value>
+        <li>UncompromisingTribalFaction_Apparel_SmokeBomb</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[@ParentName="TribalChiefBase"]</xpath>
+      <value>
+        <apparelRequired>
+          <li>UncompromisingTribalFaction_Apparel_SmokeBomb</li>
+        </apparelRequired>
+      </value>
+    </nomatch>
+  </Operation>
+  
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher"]/apparelTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher"]/apparelTags</xpath>
+      <value>
+        <li>UncompromisingTribalFaction_Apparel_SmokeBomb_Tag</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_Breacher"]</xpath>
+      <value>
+        <apparelTags>
+          <li>UncompromisingTribalFaction_Apparel_SmokeBomb_Tag</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Berserker"]/apparelTags</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_Berserker"]/apparelTags</xpath>
+      <value>
+        <li>UncompromisingTribalFaction_Apparel_SmokeBomb_Tag</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_Berserker"]</xpath>
+      <value>
+        <apparelTags>
+          <li>UncompromisingTribalFaction_Apparel_SmokeBomb_Tag</li>
+        </apparelTags>
+      </value>
+    </nomatch>
+  </Operation>
+</Patch>
