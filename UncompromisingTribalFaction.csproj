@@ -55,6 +55,7 @@
     <Content Include="1.4\Defs\GreatFlamebow.xml" />
     <Content Include="1.4\Defs\PawnKinds_Tribal.xml" />
     <Content Include="1.4\Defs\SmokeBomb.xml" />
+    <Content Include="1.4\Patches\CombatExtended_Patches.xml" />
     <Content Include="1.4\Patches\Weapon_Patches.xml" />
     <Content Include="1.4\Patches\Add_SmokeBombs.xml" />
     <Content Include="1.4\Patches\Combat_Power.xml" />
