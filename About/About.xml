@@ -9,11 +9,11 @@ The tribal faction is in a sorry state. In a world with either gun-toting, high 
 After losing battle after battle, the chiefs got together to formulate a new battle strategy.
 
 New Tribal War Plan:
-1. Gives tribal Breachers and Berserkers a 65% chance to spawn with volcanic ash filled "Smoke bombs", to cover their advance amidst gunfire.
+1. Gives tribal Breachers and Berserkers a 50% chance to spawn with volcanic ash filled "Smoke bombs", to cover their advance amidst gunfire.
 2. Gives tribal Hunters, Heavy Archers, and Archer Chiefs modified "Flamebows" and "Great Flamebows", to ignite colonists and create chaos from afar.
 3. Adds the tribal Flame thrower, a grenadier unit equipped with "Fire bombs" from "Vanilla Weapons Expanded - Tribal", to flush out defenders from their positions.
-4. Gives tribal Breachers, Berserkers, and Chiefs "Battle banners" from "Vanilla Apparel Expanded - Accessories", to increase their pain threshold.
-5. Gives all tribal Archers "Quivers" from "Vanilla Apparel Expanded - Accessories", to increase their ranged rate of fire.
+4. Gives tribal Breachers, Berserkers, and Chiefs "Battle banners" from "Vanilla Apparel Expanded - Accessories", to increase their pain threshold (If optionally installed).
+5. Gives all tribal Archers "Quivers" from "Vanilla Apparel Expanded - Accessories", to increase their ranged rate of fire (If optionally installed).
 6. Gives tribal Breachers, Archers, and Warriors normal quality gear instead of poor quality.
 7. Tweaked raid unit spawn ratios to have better ranged/melee balance.
 
@@ -33,31 +33,32 @@ Modified Item: Flamebow
   Graphically upgraded to look cooler and easily distinguishable from standard bows.
   
 Biotech:
-  The Savage Impid tribe will now use all the tools in this mod, making them a powerful threat.
+  The Savage Impid tribe will now use all the tools in this mod, making them a powerful threat!
   The Rough Neanderthal tribe prefers melee due to their poor shooting skills, so instead of regular archers, the few ranged units they do bring along will entirely be for setting your colony on fire.
 
 The goal of this mod was to make the tribals a proper and decent enemy faction, having their own strengths and requiring some strategy to take down, but not overpowered. Hope you enjoy!
 
-*No performance impact (No special code needed!).
+*No performance impact (No complex code needed!).
 *Safe to add mid-game, not recommended to remove mid-game.
-*Confirmed compatible with Vanilla Expanded series, Alpha series, and Humanoid Alien Races.
-*CE compatibility will be added when their 1.4 version is released.
-*No other known incompatibilies.
+*Confirmed compatible with CE, Vanilla Expanded series, Alpha series, and Humanoid Alien Races.
+*No other known incompatibilities.
 
 (Steam workshop can be slow/janky at detecting updated mods. If the mod doesn't update, unsubscribe, wait a few seconds, and resubscribe to force it to download the latest files)
-~2.0 update: 
-  - Now updated for 1.4 and Biotech!
-  - Rebalanced for 1.4 and added support for the Savage Impid tribe and Rough Neanderthal tribe.
-    - The Savage Impid tribe will now use all the tools in this mod, making them a powerful threat!
-    - The Rough Neanderthal tribe fields a very melee heavy force due to their poor shooting skills, so instead of regular archers, the few ranged units they do bring along will entirely be for setting your colony on fire.
-  - Modified Biotech's Flamebow to only ignite one tile.
-    - Fire bombs fulfill the role of the high priority AoE fire threat, while Flamebows are meant for long term sustained harassment. With the new tools available, flamebows also having AoE would be redundant and too powerful.
-  - Smoke bombs now have a 65% spawn chance up from 50%.
-  - Smoke bombs will now be visible on the carrier's back.
-  - Fire bomber spawn chance increased.
-  - Fire Archers split into Hunters using Flamebow and Heavy Archers using Great Flamebow.
-  - Fire units had their raid point cost increased.
-  - CE compatibility will be added when their 1.4 version is released.
+~2.02 update: 
+ - Added compatibility for CE 1.4.
+ - Removed dependency on Vanilla Apparel Expanded — Accessories since the battle banners and quivers aren't essential to the functioning of this mod. It is now optional instead of a hard requirement.
+~2.01 update: Reduced smoke bomb spawn chance back to 50%
+~2.0 update:
+- Now updated for 1.4 and Biotech!
+- The Savage Impid tribe will now use all the tools in this mod, making them a powerful threat!
+- The Rough Neanderthal tribe fields a very melee heavy force due to their poor shooting skills, so instead of regular archers, the few ranged units they do bring along will entirely be for setting your colony on fire.
+- Modified Biotech's Flamebow to only ignite one tile. Fire bombs fulfill the role of the high priority AoE fire threat, while Flamebows are meant for long term sustained harassment. With the new tools available, flamebows also having AoE would be redundant and too powerful.
+- Smoke bombs now have a 65% spawn chance up from 50%.
+- Smoke bombs will now be visible on the carrier's back.
+- Fire bomber spawn chance increased.
+- Fire Archers split into Hunters using Flamebow and Heavy Archers using Great Flamebow.
+- Fire units had their raid point cost increased.
+- CE compatibility will be added when their 1.4 version is released.
 ~1.1f update: Added conditionals to some xml patches to ensure better compatibility with other mods that modify the vanilla tribal faction.
 ~1.1e update: Fixed some errors in the CE compatibility patch.
 ~1.1d update: Decreased Fire bow accuracy by 10% so it's less annoying to deal with. Added compatibility for Combat Shields.
@@ -80,11 +81,6 @@ Credits to: hamu koutarou for the artwork used in the thumbnail and tanosii_chan
       <displayName>Vanilla Weapons Expanded - Tribal</displayName>
       <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2454918552</steamWorkshopUrl>
     </li>
-    <li>
-      <packageId>VanillaExpanded.VAEAccessories</packageId>
-      <displayName>Vanilla Apparel Expanded — Accessories</displayName>
-      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2521176396</steamWorkshopUrl>
-    </li>
   </modDependencies>
   <loadAfter>
     <li>Ludeon.RimWorld</li>
@@ -93,6 +89,5 @@ Credits to: hamu koutarou for the artwork used in the thumbnail and tanosii_chan
     <li>Ludeon.RimWorld.Biotech</li>
     <li>VanillaExpanded.VWETB</li>
     <li>VanillaExpanded.VAEAccessories</li>
-    <li>n7huntsman.combatshields</li>
   </loadAfter>
 </ModMetaData>
