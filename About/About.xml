@@ -1,52 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>[Fuu] Uncompromising Tribal Faction</name>
-  <author>Fuu Chan</author>
-  <packageId>Fuu.UncompromisingTribalFaction</packageId>
-  <description>
+	<name>Uncompromising Tribal Faction</name>
+	<author>Fuu Chan</author>
+	<packageId>Fuu.UncompromisingTribalFaction</packageId>
+	<description>
 The tribal faction is in a sorry state. In a world with either gun-toting, high tech, robotic, armored, or giant insect factions, it's a wonder the tribal faction has managed to survive at all.
-
-After losing battle after battle, the chiefs got together to formulate a new battle strategy.
+The goal of this mod was to make the tribals into an actual threat, having their own strengths and requiring some strategy to take down, but not overpowered. Please leave balance suggestions if you find them too strong or weak!
 
 New Tribal War Plan:
-1. Gives tribal Breachers and Berserkers a 50% chance to spawn with volcanic ash filled "Smoke bombs", to cover their advance amidst gunfire.
-2. Gives tribal Hunters, Heavy Archers, and Archer Chiefs modified "Flamebows" and "Great Flamebows", to ignite colonists and create chaos from afar.
-3. Adds the tribal Flame thrower, a grenadier unit equipped with "Fire bombs" from "Vanilla Weapons Expanded - Tribal", to flush out defenders from their positions.
-4. Gives tribal Breachers, Berserkers, and Chiefs "Battle banners" from "Vanilla Apparel Expanded - Accessories", to increase their pain threshold (If optionally installed).
-5. Gives all tribal Archers "Quivers" from "Vanilla Apparel Expanded - Accessories", to increase their ranged rate of fire (If optionally installed).
-6. Gives tribal Breachers, Archers, and Warriors normal quality gear instead of poor quality.
-7. Tweaked raid unit spawn ratios to have better ranged/melee balance.
+1. Adds the Flame thrower, a grenadier unit equipped with "Molotov Cocktails" to flush out defenders from their positions.
+2. Gives Breachers and Berserkers volcanic ash filled "Smoke bombs", to cover their advance amidst gunfire.
+3. Gives Hunters, Heavy Archers, and Archer Chiefs modified "Flamebows" and "Great Flamebows", that can ignite both terrain and colonists.
+4. Tweaked raid unit ratios for a more effective army composition.
+
+Vanilla Apparel Expanded - Accessories Integration (If optionally installed):
+1. Gives tribal Breachers, Berserkers, and Chiefs "Battle banners" from "Vanilla Apparel Expanded - Accessories" (If optionally installed).
+2. Gives all tribal Archers "Quivers" from "Vanilla Apparel Expanded - Accessories" (If optionally installed).
 
 New Item: Smoke Bomb (Usable by AI!)
-  A small clay pot filled with fine volcanic ash. When smashed mid-air, it will release a small cloud of smoke, obscuring incoming shots and preventing turrets from locking on.
-  Cost: 20 Stone bricks
-  Cannot be refilled (2 charges)
-  Smaller radius than smokepop belts
+Fine volcanic ash wrapped in a straw bundle. When smashed mid-air, it will release a small cloud of smoke, obscuring incoming shots and preventing turrets from locking on.
+Cost: 10 Stone bricks
+Cannot be refilled (1 charge)
+Smaller radius than smokepop belts
 
 New Item: Great Flamebow
-  A greatbow equipped with incendiary arrows, which excels at dislodging defenders by setting everything on fire. However, it has poorer accuracy and rate of fire than the standard Greatbow.
-  Has far higher damage and range than the Flamebow.
-  
+A greatbow equipped with incendiary arrows, which excels at dislodging defenders with its long range and high accuracy.
+Can ignite both terrain and colonists.
+
 Modified Item: Flamebow
-  Biotech's flamebow will now only ignite one tile. Fire bombs fulfill the role of high priority AoE fire threat, while the flamebows are meant for long term sustained harassment. With the new tools available, flamebows also having AoE would be redundant and too powerful.
-  Has far higher rate of fire than the Great Flamebow.
-  Graphically upgraded to look cooler and easily distinguishable from standard bows.
-  
-Biotech:
-  The Savage Impid tribe will now use all the tools in this mod, making them a powerful threat!
-  The Rough Neanderthal tribe prefers melee due to their poor shooting skills, so instead of regular archers, the few ranged units they do bring along will entirely be for setting your colony on fire.
+Biotech's flamebow has been changed from AoE to single tile ignition and made usable by all tribes. Molotovs now fulfill the role of close range AoE fire threat, while the flamebows are meant for medium range high rate of fire.
+Graphically upgraded to look cooler and easily distinguishable from standard bows.
 
-The goal of this mod was to make the tribals a proper and decent enemy faction, having their own strengths and requiring some strategy to take down, but not overpowered. Hope you enjoy!
+New Item: Firebomb
+If Vanilla Weapons Expanded - Tribals is installed, Firebombs should be equipped by ~10-15% of tribal units. If not installed, Molotov Cocktails will be equipped instead.
+		
+Biotech Specific Changes:
+The Savage Impid tribe will now use all the tools in this mod, giving them an even more diverse toolkit!
+The Rough Neanderthal tribe prefers melee due to their poor shooting skills, so will be majority melee except for a small amount of flame throwers and fire archers.
 
-*No performance impact (No complex code needed!).
+
+Compatibility
+*0% performance impact (no Harmony patches needed!).
+
 *Safe to add mid-game, not recommended to remove mid-game.
-*Confirmed compatible with CE, Vanilla Expanded series, Alpha series, and Humanoid Alien Races.
-*No other known incompatibilities.
 
-(Steam workshop can be slow/janky at detecting updated mods. If the mod doesn't update, unsubscribe, wait a few seconds, and resubscribe to force it to download the latest files)
-~2.02 update: 
- - Added compatibility for CE 1.4.
- - Removed dependency on Vanilla Apparel Expanded — Accessories since the battle banners and quivers aren't essential to the functioning of this mod. It is now optional instead of a hard requirement.
+*Independent, isolated, and minimal in scope, with no modifications to vanilla behavior/code required: However XML patches are required to modify units from the vanilla tribal faction, so it may conflict with mods that make large changes to the vanilla tribal faction.
+
+*Confirmed compatible with Combat Extended, Vanilla Expanded series, Alpha series, Dubs series, and hundreds more.
+
+~3.1 Update: Restored the use of Fire bombs if Vanilla Expanded Weapons - Tribals is installed. Will use Molotovs instead if not installed.
+~3.0 Update:
+~ Now updated for 1.5 Anomaly!
+~ Removed dependency on Vanilla Weapons Extended - Tribal. Tribal units changed to use Molotovs instead of Fire Bombs.
+~ Changed graphic for the smoke bomb.
+~ Slightly increased number of flame thrower units, smoke bomb reduced to 1 charge but 100% spawn rate.
+~2.02 update:
+- Added compatibility for Combat Extended 1.4!
+- Removed dependency on Vanilla Apparel Expanded — Accessories since the battle banners and quivers aren't essential to the functioning of this mod. It is now an optional requirement.
 ~2.01 update: Reduced smoke bomb spawn chance back to 50%
 ~2.0 update:
 - Now updated for 1.4 and Biotech!
@@ -68,26 +78,22 @@ The goal of this mod was to make the tribals a proper and decent enemy faction, 
 
 Github Link: https://github.com/tenguin/Rimworld_UncompromisingTribalFaction
 
-Credits to: Oskar Potocki and friends for the VE series and smoke bomb art.
 Credits to: hamu koutarou for the artwork used in the thumbnail and tanosii_chan for the upvote animation! Give them a visit!
-  </description>
-  <supportedVersions>
-    <li>1.3</li>
-    <li>1.4</li>
-  </supportedVersions>
-  <modDependencies>
-    <li>
-      <packageId>VanillaExpanded.VWETB</packageId>
-      <displayName>Vanilla Weapons Expanded - Tribal</displayName>
-      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2454918552</steamWorkshopUrl>
-    </li>
-  </modDependencies>
-  <loadAfter>
-    <li>Ludeon.RimWorld</li>
-    <li>Ludeon.RimWorld.Royalty</li>
-    <li>Ludeon.RimWorld.Ideology</li>
-    <li>Ludeon.RimWorld.Biotech</li>
-    <li>VanillaExpanded.VWETB</li>
-    <li>VanillaExpanded.VAEAccessories</li>
-  </loadAfter>
+	</description>
+	<supportedVersions>
+		<li>1.3</li>
+		<li>1.4</li>
+		<li>1.5</li>
+	</supportedVersions>
+	<modDependencies>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Ideology</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>Ludeon.RimWorld.Anomaly</li>
+		<li>VanillaExpanded.VWETB</li>
+		<li>VanillaExpanded.VAEAccessories</li>
+	</loadAfter>
 </ModMetaData>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!-- Reduce the amount of ranged in the mixed, ranged only, and breach combat group, to make room for the fire versions -->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/FactionDef[defName="TribeSavageImpid"]/pawnGroupMakers/li[position()=1 or position()=2 or position()=4 or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options/Tribal_Archer</xpath>
+          <value>
+            <Tribal_Archer>3</Tribal_Archer>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/FactionDef[defName="TribeSavageImpid"]/pawnGroupMakers/li[position()=1 or position()=2 or position()=4 or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options/Tribal_Hunter</xpath>
+          <value>
+            <Tribal_Hunter>3</Tribal_Hunter>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/FactionDef[defName="TribeSavageImpid"]/pawnGroupMakers/li[position()=1 or position()=2 or position()=4 or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options/Tribal_HeavyArcher</xpath>
+          <value>
+            <Tribal_HeavyArcher>3</Tribal_HeavyArcher>
+          </value>
+        </li>
+
+        <!-- Reduce amount of vanilla fire archers since we'll be adding heavy fire archers-->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/FactionDef[defName="TribeSavageImpid"]/pawnGroupMakers/li[position()=1 or position()=2 or position()=4 or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options/Tribal_Archer_Fire</xpath>
+          <value>
+            <Tribal_Archer_Fire>3</Tribal_Archer_Fire>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/FactionDef[defName="TribeSavageImpid"]/pawnGroupMakers/li[position()=1 or position()=2 or position()=4 or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options/Tribal_Hunter_Fire</xpath>
+          <value>
+            <Tribal_Hunter_Fire>3</Tribal_Hunter_Fire>
+          </value>
+        </li>
+
+        <!-- Mixed and breach group needs more berserkers or they won't have enough smokes -->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/FactionDef[defName="TribeSavageImpid"]/pawnGroupMakers/li[position()=1 or position()=4]/options/Tribal_Berserker</xpath>
+          <value>
+            <Tribal_Berserker>10</Tribal_Berserker>
+          </value>
+        </li>
+        
+        <!-- Add fire heavy archers to every battle group -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/FactionDef[defName="TribeSavageImpid"]/pawnGroupMakers/li[position()=1 or position()=2 or position()=4 or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options</xpath>
+          <value>
+            <UncompromisingTribalFaction_HeavyArcher_Fire>5</UncompromisingTribalFaction_HeavyArcher_Fire>
+          </value>
+        </li>
+        
+        <!-- Add fire throwers to every battle group -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/FactionDef[defName="TribeSavageImpid"]/pawnGroupMakers/li[kindDef="Combat" or kindDef="Settlement" or kindDef="Settlement_RangedOnly"]/options</xpath>
+          <value>
+            <UncompromisingTribalFaction_FireThrower>5</UncompromisingTribalFaction_FireThrower>
+          </value>
+        </li>
+        <!-- Make the archer only group have more fire bombers, since they don't have smokes they're pretty weak otherwise -->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/FactionDef[defName="TribeSavageImpid"]/pawnGroupMakers/li[position()=2 or kindDef="Settlement_RangedOnly"]/options/UncompromisingTribalFaction_FireThrower</xpath>
+          <value>
+            <UncompromisingTribalFaction_FireThrower>6</UncompromisingTribalFaction_FireThrower>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>1.4\Assemblies\</OutputPath>
+    <OutputPath>1.5\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -25,7 +25,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>1.4\Assemblies\</OutputPath>
+    <OutputPath>1.5\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -65,6 +65,19 @@
     <Content Include="1.4\Patches\Factions_Misc_Neanderthal.xml" />
     <Content Include="1.4\Patches\VAE_Accessories.xml" />
     <Content Include="1.4\Patches\VWE_Tribal.xml" />
+    <Content Include="1.5\Defs\Filth_FireArrow.xml" />
+    <Content Include="1.5\Defs\GreatFlamebow.xml" />
+    <Content Include="1.5\Defs\PawnKinds_Tribal.xml" />
+    <Content Include="1.5\Defs\SmokeBomb.xml" />
+    <Content Include="1.5\Patches\Add_SmokeBombs.xml" />
+    <Content Include="1.5\Patches\CombatExtended_Patches.xml" />
+    <Content Include="1.5\Patches\Combat_Power.xml" />
+    <Content Include="1.5\Patches\Double_Money.xml" />
+    <Content Include="1.5\Patches\Factions_Misc.xml" />
+    <Content Include="1.5\Patches\Factions_Misc_Impid.xml" />
+    <Content Include="1.5\Patches\Factions_Misc_Neanderthal.xml" />
+    <Content Include="1.5\Patches\VAE_Accessories.xml" />
+    <Content Include="1.5\Patches\Weapon_Patches.xml" />
     <Content Include="About\About.xml" />
     <Content Include="Common\Textures\Things\Pawn\Humanlike\Apparel\SmokeBomb\SmokeBomb.png" />
   </ItemGroup>
@@ -81,11 +94,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="1.4\Assemblies\" />
+    <Folder Include="1.5\Assemblies\" />
     <Folder Include="Common\Textures\Things\Item\Equipment\WeaponRanged\" />
     <Folder Include="Common\Textures\Things\Projectile\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>"R:\Rimworld Modding Biotech\!MOD TRANSFER.bat"</PostBuildEvent>
+    <PostBuildEvent>"R:\Rimworld Modding Anomaly\!MOD TRANSFER.bat"</PostBuildEvent>
   </PropertyGroup>
 </Project>
