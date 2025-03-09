@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!--Only apply if NOT using Combat Extended-->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Combat Extended</li>
+		</mods>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<!--Flamebows are a Biotech only item. Use Great flamebows if Biotech is not installed, modify Flamebows to use our class if installed-->
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Biotech</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="Proj_FireArrow"]/thingClass</xpath>
+								<value>
+									<thingClass>UncompromisingTribalFaction.FuuFireArrow</thingClass>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="Flamebow"]/recipeMaker</xpath>
+								<value>
+									<recipeMaker>
+										<recipeUsers Inherit='False'>
+											<li>CraftingSpot</li>
+										</recipeUsers>
+										<researchPrerequisite>RecurveBow</researchPrerequisite>
+										<skillRequirements>
+											<Crafting>5</Crafting>
+										</skillRequirements>
+										<displayPriority>521</displayPriority>
+									</recipeMaker>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="Flamebow"]</xpath>
+								<value>
+									<costList>
+										<WoodLog>40</WoodLog>
+										<Chemfuel>15</Chemfuel>
+									</costList>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="Flamebow"]/statBases</xpath>
+								<value>
+									<WorkToMake>5000</WorkToMake>
+								</value>
+							</li>
+						</operations>
+					</match>
+					<nomatch Class="PatchOperationReplace">
+						<xpath>/Defs/PawnKindDef[defName="UncompromisingTribalFaction_Hunter_Fire"]/weaponTags/li</xpath>
+						<value>
+							<li>UncompromisingTribalFaction_GreatFlamebow_Tag</li>
+						</value>
+					</nomatch>
+				</li>
+
+				<!--Archer Chiefs should only use Great Firebow or mod-added items, not the standard greatbow.-->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="Bow_Great"]/weaponTags/li[text()="NeolithicRangedChief"]</xpath>
+					<match Class="PatchOperationRemove">
+						<xpath>/Defs/ThingDef[defName="Bow_Great"]/weaponTags/li[text()="NeolithicRangedChief"]</xpath>
+					</match>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Weapons Expanded - Tribal</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!-- Change FireBombs to our own FireBomb Tag, which only our FireThrower unit will use so we can control the exact amount-->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VWE_Weapon_FireBomb"]/weaponTags/li</xpath>
+					<value>
+						<li>UncompromisingTribalFaction_FireBomb_Tag</li>
+					</value>
+				</li>
+				<!-- Ideology needs this tag to make this classify as a neolithic noble weapon or it won't spawn on tribes with neo noble weapon -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName="VWE_Weapon_FireBomb"]/weaponClasses</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VWE_Weapon_FireBomb"]/weaponClasses</xpath>
+						<value>
+							<li>Neolithic</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="VWE_Weapon_FireBomb"]</xpath>
+						<value>
+							<weaponClasses>
+								<li>Neolithic</li>
+							</weaponClasses>
+						</value>
+					</nomatch>
+				</li>
+			</operations>
+		</match>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<!-- Change Molotovs to have our own FireBomb Tag, which our FireThrower unit will use so we can control the exact amount that spawns-->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Weapon_GrenadeMolotov"]/weaponTags</xpath>
+					<value>
+						<li>UncompromisingTribalFaction_FireBomb_Tag</li>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+
+</Patch>
